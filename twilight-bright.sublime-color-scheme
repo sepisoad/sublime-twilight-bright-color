@@ -1,0 +1,111 @@
+{
+  "name": "twilight bright new",
+  "author": "Sepehr Aryani",
+  "variables": {
+      "background": "#FFFFFF",
+      "foreground": "#505050",
+      "selection": "#c7e1f2",
+      "hlline": "#f5f5f5",
+      "cursor": "#b4b4b4",
+      "gray1": "#a49da5", 
+      "gray1bg": "#f7f7f7",
+      "gray2": "#d9d9d9",
+      "gray3": "#b3adb4", 
+      "gray3bg": "#eaeaea",
+      "gray4": "#c8c8c8",
+      "gray5": "#efefef",
+      "red1": "#d15120", 
+      "red1bg": "#fdf2ed",
+      "red2": "#b23f1e", 
+      "red2bg": "#fcf3f1",
+      "brown1": "#9f621d", 
+      "brown1bg": "#fdf2ed",
+      "orange1": "#cf7900", 
+      "orange1bg": "#fdf9f2",
+      "yellow1": "#d2ad00", 
+      "yellow1bg": "#faf7e7",
+      "green1": "#5f9411", 
+      "green1bg": "#eff8e9",
+      "blue1": "#6b82a7", 
+      "blue1bg": "#f1f4f8",
+      "blue2": "#417598", 
+      "blue2bg": "#e3f4ff",
+      "purple1": "#a66bab", 
+      "purple1bg": "#f8f1f8",
+  },
+  "globals": {
+    "background": "var(background)",
+    "foreground": "var(foreground)",
+    "line_highlight": "var(hlline)",
+    "caret": "var(gray1)",
+    "block_caret": "var(gray2)",
+    "selection": "var(selection)",
+    "find_highlight": "var(blue2bg)",
+    "highlight": "var(blue2bg)",
+    "brackets_options": "bold",
+    "selection_border_width": "0",
+    "selection_corner_style": "square",
+    "block_caret_corner_style": "square",
+  },
+  "rules": [
+    {
+      "name": "Comment",
+      "scope": "comment",
+      "background": "var(gray1bg)",
+      "foreground": "var(gray1)"
+    },
+    {
+      "name": "String",
+      "scope": "string",
+      "background": "var(green1bg)",
+      "foreground": "var(green1)"
+    },
+    {
+      "name": "Number",
+      "scope": "constant.numeric",
+      "background": "var(purple1bg)",
+      "foreground": "var(purple1)"
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword",
+      "background": "var(orange1bg)",
+      "foreground": "var(orange1)"
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "background": "var(blue1bg)",
+      "foreground": "var(blue1)"
+    },
+    {
+      "name": "Constant",
+      "scope": "constant",
+      "background": "var(blue2bg)",
+      "foreground": "var(blue2)"
+    },
+    {
+      "name": "Entity",
+      "scope": "entity",
+      "background": "var(red1bg)",
+      "foreground": "var(red1)"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "background": "var(red1)",
+      "foreground": "var(red1bg)"
+    },
+    {
+      "name": "Support",
+      "scope": "support",
+      "background": "var(red2bg)",
+      "foreground": "var(red2)"
+    },
+    {
+      "name": "Source",
+      "scope": "source",
+      "foreground": "var(foreground)"
+    },
+  ]
+}
