@@ -107,5 +107,12 @@
       "scope": "source",
       "foreground": "var(foreground)"
     },
+    // this is used by neovintageous plugin
+    {
+      "name": "HighlightedYank",
+      "scope": "highlightedyank",
+      "background": "var(yellow1bg)",
+      "foreground": "var(yellow1)"
+    }
   ]
 }
