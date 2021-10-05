@@ -1,136 +1,249 @@
+
 {
-  "name": "twilight bright new",
+  "name": "fuck",
   "author": "Sepehr Aryani",
   "variables": {
-      "background": "#FFFFFF",
-      "foreground": "#505050",
-      "selection": "#c7e1f2",
-      "hlline": "#f5f5f5",
-      "cursor": "#b4b4b4",
-      "gray1": "#a49da5", 
-      "gray1bg": "#f7f7f7",
-      "gray2": "#d9d9d9",
-      "gray3": "#b3adb4", 
-      "gray3bg": "#eaeaea",
-      "gray4": "#c8c8c8",
-      "gray5": "#efefef",
-      "red1": "#d15120", 
-      "red1bg": "#fdf2ed",
-      "red2": "#b23f1e", 
-      "red2bg": "#fcf3f1",
-      "brown1": "#9f621d", 
-      "brown1bg": "#fdf2ed",
-      "orange1": "#cf7900", 
-      "orange1bg": "#fdf9f2",
-      "yellow1": "#d2ad00", 
-      "yellow1bg": "#faf7e7",
-      "green1": "#5f9411", 
-      "green1bg": "#eff8e9",
-      "blue1": "#6b82a7", 
-      "blue1bg": "#f1f4f8",
-      "blue2": "#417598", 
-      "blue2bg": "#e3f4ff",
-      "purple1": "#a66bab", 
-      "purple1bg": "#f8f1f8",
+    "tb_background": "#FFFFFF",
+    "tb_foreground": "#505050",
+    "tb_black": "hsl(0, 0%, 0%)",
+    "tb_selection": "#c7e1f2",
+    "tb_hlline": "#f5f5f5",
+    "tb_cursor": "#b4b4b4",
+    "tb_gray1": "#a49da5", 
+    "tb_gray1bg": "#f7f7f7",
+    "tb_gray2": "#d9d9d9",
+    "tb_gray3": "#b3adb4", 
+    "tb_gray3bg": "#eaeaea",
+    "tb_gray4": "#c8c8c8",
+    "tb_gray5": "#efefef",
+    "tb_red1": "#d15120", 
+    "tb_red1bg": "#fdf2ed",
+    "tb_red2": "#b23f1e", 
+    "tb_red2bg": "#fcf3f1",
+    "tb_brown1": "#9f621d", 
+    "tb_brown1bg": "#fdf2ed",
+    "tb_orange1": "#cf7900", 
+    "tb_orange1bg": "#fdf9f2",
+    "tb_yellow1": "#d2ad00", 
+    "tb_yellow1bg": "#faf7e7",
+    "tb_green1": "#5f9411", 
+    "tb_green1bg": "#eff8e9",
+    "tb_blue1": "#6b82a7", 
+    "tb_blue1bg": "#f1f4f8",
+    "tb_blue2": "#417598", 
+    "tb_blue2bg": "#e3f4ff",
+    "tb_purple1": "#a66bab", 
+    "tb_purple1bg": "#f8f1f8",
   },
   "globals": {
-    "background": "var(background)",
-    "foreground": "var(foreground)",
-    "line_highlight": "var(hlline)",
-    "caret": "var(gray1)",
-    "block_caret": "var(gray2)",
-    "selection": "var(selection)",
-    "find_highlight": "var(blue2bg)",
-    "highlight": "var(blue2bg)",
+    "background": "var(tb_background)",
+    "foreground": "var(tb_foreground)",
+    "line_highlight": "var(tb_hlline)",
+    "caret": "var(tb_gray1)",
+    "block_caret": "var(tb_gray2)",
+    "selection": "var(tb_selection)",
+    "find_highlight": "var(tb_blue2bg)",
+    "highlight": "var(tb_blue2bg)",
     "brackets_options": "bold",
     "selection_border_width": "0",
     "selection_corner_style": "square",
-    // "block_caret_corner_style": "square",
   },
   "rules": [
     {
       "name": "Comment",
-      "scope": "comment",
-      "background": "var(gray1bg)",
-      "foreground": "var(gray1)"
+      "scope": "comment, punctuation.definition.comment",
+      "background": "var(tb_gray1bg)",
+      "foreground": "var(tb_gray1)"
     },
     {
       "name": "String",
       "scope": "string",
-      "background": "var(green1bg)",
-      "foreground": "var(green1)"
-    },
-    {
-      "name": "Number",
-      "scope": "constant.numeric",
-      "background": "var(purple1bg)",
-      "foreground": "var(purple1)"
-    },
-    {
-      "name": "Keyword",
-      "scope": "keyword",
-      "background": "var(orange1bg)",
-      "foreground": "var(orange1)"
+      "background": "var(tb_green1bg)",
+      "foreground": "var(tb_green1)"
     },
     {
       "name": "Variables",
       "scope": "variable",
-      "background": "var(blue1bg)",
-      "foreground": "var(blue1)"
+      "background": "var(tb_orange1bg)",
+      "foreground": "var(tb_orange1)"
     },
     {
-      "name": "Constant",
-      "scope": "constant",
-      "background": "var(blue2bg)",
-      "foreground": "var(blue2)"
+      "name": "Punctuation",
+      "scope": "punctuation.definition",
+      "background": "var(tb_background)",
+      "foreground": "var(tb_foreground)"
     },
     {
-      "name": "Entity",
-      "scope": "entity",
-      "background": "var(red1bg)",
-      "foreground": "var(red1)"
+      "name": "Number",
+      "scope": "constant.numeric",
+      "background": "var(tb_purple1bg)",
+      "foreground": "var(tb_purple1)"
+    },
+    {
+      "name": "Built-in constant",
+      "scope": "constant.language",
+      "background": "var(tb_red1bg)",
+      "foreground": "var(tb_red1)",
+      "font_style": "bold"
+    },
+    { //@ \n\t%c%v%s...
+      "name": "User-defined constant",
+      "scope": "constant.character, constant.other",
+      // "background": "var(black)",
+      // "foreground": "var(tb_green2)",
+      "font_style": "bold"
+    },
+    // { //?
+    //   "name": "Member Variable",
+    //   "scope": "variable.member",
+    //   "foreground": "var(red)",
+    //   "background": "var(black)",
+    // },
+    {
+      "name": "Keyword",
+      "scope": "keyword - keyword.operator, keyword.operator.word",
+      "background": "var(tb_orange1bg)",
+      "foreground": "var(tb_orange1)",
+    },
+    { //@ -,=?:!*...
+      "name": "Operators",
+      "scope": "keyword.operator",
+      // "background": "var(black)",
+      // "foreground": "var(red2)"
+      // "font_style": "bold"
+    },
+    { //@ :
+      "name": "Punctuation",
+      "scope": "punctuation.separator, punctuation.terminator",
+      // "background": "var(black)",
+      // "foreground": "var(blue6)"
+      // "font_style": "bold"
+    },
+    { //@ {}
+      "name": "Punctuation",
+      "scope": "punctuation.section",
+      // "background": "var(black)",
+      // "foreground": "var(white)"
+      // "font_style": "bold"
+    },
+    { //@ .
+      "name": "Accessor",
+      "scope": "punctuation.accessor",
+      // "background": "var(black)",
+      // "foreground": "var(blue6)"
+      // "font_style": "bold"
+    },
+    { //?
+      "name": "Annotation Punctuation",
+      "scope": "punctuation.definition.annotation",
+      "background": "var(black)",
+      "foreground": "var(blue5)"
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "background": "var(tb_red1bg)",
+      "foreground": "var(tb_red1)"
+    },
+    {
+      "name": "Storage type",
+      "scope": "storage.type",
+      "background": "var(tb_red2bg)",
+      "foreground": "var(tb_red2)",
+    },
+    {
+      "name": "Entity name",
+      "scope": "entity.name.function",
+      "background": "var(tb_blue1bg)",
+      "foreground": "var(tb_blue1)"
+    },
+    {
+      "name": "Entity name",
+      "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
+      "background": "var(tb_brown1bg)",
+      "foreground": "var(tb_brown1)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Inherited class",
+      "scope": "entity.other.inherited-class",
+      "background": "var(tb_brown1bg)",
+      "foreground": "var(tb_brown1)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Function argument",
+      "scope": "variable.parameter",
+      "background": "var(tb_brown1bg)",
+      "foreground": "var(tb_brown1)",
+    },
+    { //@ _ in go
+      "name": "Language variable",
+      "scope": "variable.language",
+      // "background": "var(black)",
+      // "foreground": "var(red)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Function call",
+      "scope": "variable.function, variable.annotation",
+      "background": "var(tb_blue2bg)",
+      "foreground": "var(tb_blue2)"
+    },
+    {
+      "name": "Library function",
+      "scope": "support.function, support.macro",
+      "background": "var(tb_blue2bg)",
+      "foreground": "var(tb_blue2)"
+    },
+    {
+      "name": "Library constant",
+      "scope": "support.constant",
+      "background": "var(tb_red1bg)",
+      "foreground": "var(tb_red1)",
+    },
+    {
+      "name": "Library class/type",
+      "scope": "support.type, support.class",
+      "background": "var(tb_red2bg)",
+      "foreground": "var(tb_red2)",
     },
     {
       "name": "Invalid",
       "scope": "invalid",
-      "background": "var(red1)",
-      "foreground": "var(red1bg)"
+      "background": "var(tb_red1)",
+      "foreground": "var(tb_red1bg)"
     },
     {
-      "name": "Support",
-      "scope": "support",
-      "background": "var(red2bg)",
-      "foreground": "var(red2)"
-    },
-    {
-      "name": "Source",
-      "scope": "source",
-      "foreground": "var(foreground)"
+      "name": "Invalid deprecated",
+      "scope": "invalid.deprecated",
+      "background": "var(tb_red2)",
+      "foreground": "var(tb_red2bg)"
     },
     // this is used by neovintageous plugin
     {
       "name": "NVHighlightedYank",
       "scope": "highlightedyank",
-      "background": "var(yellow1bg)",
-      "foreground": "var(yellow1)"
+      "background": "var(tb_yellow1bg)",
+      "foreground": "var(tb_yellow1)"
     },
     {
       "name": "NVSearchInc",
       "scope": "neovintageous_search_inc",
-      "background": "var(brown1)",
-      "foreground": "var(brown1bg)"
+      "background": "var(tb_brown1)",
+      "foreground": "var(tb_brown1bg)"
     },
     {
       "name": "NVSearchCur",
       "scope": "neovintageous_search_cur",
-      "background": "var(brown1)",
-      "foreground": "var(brown1bg)"
+      "background": "var(tb_brown1)",
+      "foreground": "var(tb_brown1bg)"
     },
     {
       "name": "NVSearchOcc",
       "scope": "neovintageous_search_occ",
-      "background": "var(yellow1)",
-      "foreground": "var(yellow1bg)"
+      "background": "var(tb_yellow1)",
+      "foreground": "var(tb_yellow1bg)"
     }
   ]
 }
